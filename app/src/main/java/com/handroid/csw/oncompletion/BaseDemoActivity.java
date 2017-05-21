@@ -22,14 +22,6 @@ import android.widget.Toast;
  * limitations under the License.
  */
 
-
-import android.app.Activity;
-import android.content.Intent;
-import android.content.IntentSender.SendIntentException;
-import android.os.Bundle;
-import android.util.Log;
-import android.widget.Toast;
-
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -46,30 +38,9 @@ public abstract class BaseDemoActivity extends AppCompatActivity implements
     private static final String TAG = "BaseDemoActivity";
 
     /**
-     * DriveId of an existing folder to be used as a parent folder in
-     * folder operations samples.
-     */
-    public static final String EXISTING_FOLDER_ID = "0B2EEtIjPUdX6MERsWlYxN3J6RU0";
-
-    /**
-     * DriveId of an existing file to be used in file operation samples..
-     */
-    public static final String EXISTING_FILE_ID = "0ByfSjdPVs9MZTHBmMVdSeWxaNTg";
-
-    /**
-     * Extra for account name.
-     */
-    protected static final String EXTRA_ACCOUNT_NAME = "account_name";
-
-    /**
      * Request code for auto Google Play Services error resolution.
      */
     protected static final int REQUEST_CODE_RESOLUTION = 1;
-
-    /**
-     * Next available request code.
-     */
-    protected static final int NEXT_AVAILABLE_REQUEST_CODE = 2;
 
     /**
      * Google API client.
