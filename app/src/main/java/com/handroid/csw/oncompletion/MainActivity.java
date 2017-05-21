@@ -144,6 +144,12 @@ public class MainActivity extends BaseDemoActivity {
                 }
             };
 
+    /**
+     * grabs the parent folder resourceid
+     * courtesy of http://stackoverflow.com/questions/38012719/get-google-drive-folders-resourceid
+     * @param driveId
+     * @return
+     */
     public static DriveId getParentID(DriveId driveId) {
         MetadataBuffer mdb = null;
         DriveApi.MetadataBufferResult mbRslt = driveId.asDriveResource().listParents(mGoogleApiClient).await();
